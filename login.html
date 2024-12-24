@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>账号登录</title>
+  <style>
+    body {
+      /* 设置背景渐变 */
+      background: linear-gradient(to right, #7266a1, #edd281);
+      display: flex;
+      justify-content: center;
+    }
+
+    .a {
+      position: relative;
+      top: 100px;
+      width: 1100px;
+      height: 550px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .8);
+      display: flex;
+    }
+
+    .b {
+      width: 800px;
+      height: 550px;
+      background-image: url("./images/banner3.webp");
+      /* 让图片适应大小 */
+      background-size: cover;
+    }
+
+    .c {
+      width: 300px;
+      height: 550px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .d {
+      width: 250px;
+      height: 500px;
+    }
+
+    .d h1 {
+      font: 900 30px '';
+    }
+
+    .e {
+      width: 230px;
+      margin: 20px 0;
+      outline: none;
+      border: 0;
+      padding: 10px;
+      border-bottom: 3px solid rgb(80, 80, 170);
+      font: 900 16px '';
+    }
+
+    .f {
+      float: right;
+      margin: 10px 0;
+    }
+
+    .r {
+      float: left;
+      margin: 10px 0;
+      color: red;
+    }
+
+    .g {
+      position: absolute;
+      margin: 20px;
+      bottom: 40px;
+      display: block;
+      width: 200px;
+      height: 60px;
+      font: 900 27px '';
+      color: white;
+
+      text-decoration: none;
+      line-height: 50px;
+      border-radius: 30px;
+      background: linear-gradient(to left, #7266a1, #edd281);
+
+      text-align: center;
+    }
+
+    .zc {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a">
+    <div class="b"></div>
+    <div class="c">
+      <div class="d">
+        <h1>账号登录</h1>
+        <input type="text" class="e" placeholder="用户名">
+        <input type="text" class="e" placeholder="账号">
+        <input type="password" class="e" placeholder="密码">
+        <div class="zc">
+          <a href="./register.html" class="r">账号注册</a>
+          <a href="#" class="f">忘记密码?</a>
+        </div>
+        <a href="./index.html" class="g">立即登录</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="./images/icon.png" type="image/x-icon">
+	<title>首页</title>
+	<link rel="stylesheet" href="./css/index.css">
+	
+	</script>
+</head>
+<body>
+	<div class="box">
+		<header>
+			<img src="imges/logo.png">
+			<div>
+				<input type="text">
+				<p>搜索</p>
+			</div>
+		</header>
+		<!-- 导航 -->
+		<nav>
+			<ul>
+				<a class="active" href="./index.html">
+					<li>首页</li>
+				</a>
+				<a href="./course.html">
+					<li>发展历程</li>
+				</a>
+				<a href="./trade.html">
+					<li>唱腔流派</li>
+				</a>
+				<a href="./face.html">
+					<li>演出剧目</li>
+				</a>
+				<a href="">
+					<li>文创周边</li>
+				</a>
+				<a href="./category.html">
+					<li>人物介绍</li>
+				</a>
+				<a href="./login.html">
+					<li>账号登录</li>
+				</a>
+			</ul>
+		</nav>
+		<!-- 轮播图 -->
+		<div class="carousel-container">
+			<div class="carousel">
+				<img src="imges/banner.jpg" alt="Banner1">
+				<img src="imges/bannre1.jpg" alt="Banner2">
+				<img src="imges/banner2.jpg" alt="Banner3">
+				<!-- 克隆的第一张图片 -->
+				<img src="imges/banner.jpg" alt="Banner 1 (Clone)">
+			</div>
+			<button class="carousel-btn prev"><strong><</strong></button>
+			<button class="carousel-btn next"><strong>></strong></button>
+		</div>
+		<script>
+			const carousel = document.querySelector('.carousel');
+			const images = carousel.querySelectorAll('img');
+			const prevBtn = document.querySelector('.prev');
+			const nextBtn = document.querySelector('.next');
+			let currentIndex = 0;
+			const totalImages = images.length - 1; // 减去克隆的图片
+	
+			function showImage(index) {
+				carousel.style.transform = `translateX(-${index * 100}%)`;
+			}
+	
+			function nextImage() {
+				currentIndex++;
+				if (currentIndex > totalImages) {
+					// 当到达克隆的图片时，立即跳回第一张图片，不显示过渡效果
+					carousel.style.transition = 'none';
+					currentIndex = 0;
+					showImage(currentIndex);
+					setTimeout(() => {
+						carousel.style.transition = 'transform 0.5s ease-in-out';
+						currentIndex++;
+						showImage(currentIndex);
+					}, 10);
+				} else {
+					showImage(currentIndex);
+				}
+			}
+	
+			function prevImage() {
+				currentIndex--;
+				if (currentIndex < 0) {
+					// 当到达第一张图片时，立即跳到最后一张真实图片，不显示过渡效果
+					carousel.style.transition = 'none';
+					currentIndex = totalImages;
+					showImage(currentIndex);
+					setTimeout(() => {
+						carousel.style.transition = 'transform 0.5s ease-in-out';
+						currentIndex--;
+						showImage(currentIndex);
+					}, 10);
+				} else {
+					showImage(currentIndex);
+				}
+			}
+	
+			// 自动轮播
+			let intervalId = setInterval(nextImage, 3000);
+	
+			// 点击按钮切换图片
+			nextBtn.addEventListener('click', () => {
+				clearInterval(intervalId);
+				nextImage();
+				intervalId = setInterval(nextImage, 3000);
+			});
+	
+			prevBtn.addEventListener('click', () => {
+				clearInterval(intervalId);
+				prevImage();
+				intervalId = setInterval(nextImage, 3000);
+			});
+		</script>
+	</div>
+	<!-- 主内容 -->
+	<div class="main">
+		<!-- 简介 -->
+		<div class="center">
+			<div class="center_left">
+				<h2>浙江小百花越剧团</h2>
+				<p> &#12288;&#12288;浙江小百花越剧团：20世纪80年代浙江大力培养戏曲新人。1982年从全省2000多名戏曲学员中选拔400名参加全省戏曲“小百花”会演，有200名新秀获得“优秀小百花奖”和“小百花奖”。 在浙江省委与文化部门重视下，从全省70多个专业越剧团在以上两次会演获奖人员中精心挑选40名越剧新秀(平均年龄18岁)，将她们集中在浙江艺术学校进行严格训练。她们受到聘请来的越剧界与京、昆、婺等多个剧种著名艺术家的亲传技艺、悉心指导。
+					省内著名剧作家为之编创新剧目，并组织优秀导演、作曲、舞美、乐队人员通力合作，精心排练新剧目和优秀传统剧目。主要剧目有：大型古装戏《五女拜寿》、《汉宫怨》、《双玉蝉》等，传统折子戏《楼台会》《何文秀·哭牌·算命》《王千金祭夫》《拾玉镯》《断桥》《二堂放子》《送花楼会》《露真》等十余个。 1985年4月，浙江省成立了浙江越剧院，为下属剧团之一，内部称为浙江越剧院二团，对外称为浙江越剧院小百花越剧团。 </p>
+			</div>
+			<div class="center_rigth"></div>
+		</div>
+		<div class="imgs">
+			<div>
+				<img src="imges/钱塘里.jpg">
+			</div>
+			<div>
+				<img src="imges/梁祝.jpg">
+			</div>
+			<div>
+				<img src="imges/西园记.jpg">
+			</div>
+			<div>
+				<img src="imges/五女拜寿.jpg">
+			</div>
+		</div>
+	</div>
+	<!-- 页脚 -->
+	<footer> ©浙江小百花越剧团 版权所有 </footer>
+	</div>
+</body>
+
+</html>
