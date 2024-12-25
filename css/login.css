@@ -1,0 +1,51 @@
+
+    .d {
+      width: 100%;
+      height: unset;
+	  text-align: center;
+    }
+
+    .d h1 {
+      font-size: 30px;
+    }
+
+    .e {
+      width: 250px;
+      margin: 20px 10px;
+      outline: none;
+      border: 0;
+      padding: 10px;
+      border-bottom: 3px solid rgb(80, 80, 170);
+    }
+
+    .f {
+      float: right;
+      margin: 10px 0;
+	  color: red;
+	  font-size: 16px;
+    }
+
+    .r {
+      float: right;
+      margin: 10px 0;
+	  font-size: 16px;
+    }
+
+    .g {
+      display: block;
+      width: 200px;
+      height: 60px;
+      font-size: 26px;
+      color: white;
+      text-decoration: none;
+      line-height: 50px;
+      border-radius: 30px;
+      background: linear-gradient(to left, #7266a1, #edd281);
+	  margin-left:425px ;
+	  /* margin-bottom: 20px; */
+      text-align: center;
+    }
+
+    .zc {
+      display: inline;
+    }

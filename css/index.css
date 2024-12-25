@@ -188,6 +188,7 @@ footer {
 	width: 22%;
 	display: inline-block;
 	overflow: hidden;
+	border-radius: 10px;
 }
 
 .imgs img {
